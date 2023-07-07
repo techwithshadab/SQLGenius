@@ -1,1 +1,1 @@
-![SQLGenius](app/SQLGenius.png)
+![SQLGenius](app/app_images/SQLGenius.png)
