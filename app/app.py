@@ -6,10 +6,6 @@ import re
 from PIL import Image
 import pandas as pd
 import base64
-import sys
-#sys.path.append('/Users/shadabhussain/Documents/Hackathons/SQLGenius/app')
-sys.path.append('/app/sqlgenius/app')
-
 
 # Execute Snowflake Query
 def execute_snowflake_query(query, sf_dict):
@@ -223,10 +219,11 @@ sf_dict = {'user': 'username', 'password': 'password', 'account': 'account',
 # database = sf_dict['database']
 # schema = sf_dict['schema']
 
-
-
+sys_path = '/Users/shadabhussain/Documents/Hackathons/SQLGenius/app'
+streamlit_path = '/app/sqlgenius/app'
+path = streamlit_path
 # Page icon
-icon = Image.open('./app_images/icon.png')
+icon = Image.open(path+'/app_images/icon.png')
 
 # Page config
 st.set_page_config(page_title="SQLGenius",
@@ -245,7 +242,7 @@ database = None
 schema = None
 selected_table_name= None
 
-with open("./app_images/SQLGenius.png", "rb") as f:
+with open(path+"/app_images/SQLGenius.png", "rb") as f:
     data = base64.b64encode(f.read()).decode("utf-8")
 
     st.sidebar.markdown(
