@@ -232,7 +232,7 @@ database = None
 schema = None
 selected_table_name= None
 
-with open("../images/SQLGenius.png", "rb") as f:
+with open("SQLGenius.png", "rb") as f:
     data = base64.b64encode(f.read()).decode("utf-8")
 
     st.sidebar.markdown(
