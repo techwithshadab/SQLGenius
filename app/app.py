@@ -7,8 +7,8 @@ from PIL import Image
 import pandas as pd
 import base64
 import sys
-sys.path.append('/Users/shadabhussain/Documents/Hackathons/SQLGenius/app')
-# sys.path.append('/app/sqlgenius/app')
+#sys.path.append('/Users/shadabhussain/Documents/Hackathons/SQLGenius/app')
+sys.path.append('/app/sqlgenius/app')
 
 
 # Execute Snowflake Query
