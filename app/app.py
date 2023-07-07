@@ -226,11 +226,24 @@ st.title("SQLGenius")
 # List of Databases
 db_label = "Select Database:"
 db_details_query = "SHOW SCHEMAS;"
-db_df= None
-llm_api_key= None
-database= None
-schema= None
+db_df = None
+llm_api_key = None
+database = None
+schema = None
 selected_table_name= None
+
+with open("../images/SQLGenius.png", "rb") as f:
+    data = base64.b64encode(f.read()).decode("utf-8")
+
+    st.sidebar.markdown(
+        f"""
+        <div style="display:table;margin-top:-5%;margin-left:10%;margin-bottom:5%;">
+            <img src="data:image/png;base64,{data}" width="240" height="135">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 with st.sidebar:
     with st.expander("✨ Enter Credentials", True):
         llm_api_key = st.text_input("AI21 API Key", type="password")
