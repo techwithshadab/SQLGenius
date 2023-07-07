@@ -221,7 +221,7 @@ sf_dict = {'user': 'username', 'password': 'password', 'account': 'account',
 # database = sf_dict['database']
 # schema = sf_dict['schema']
 
-st.title("LLM Text2SQL")
+st.title("SQLGenius")
 
 # List of Databases
 db_label = "Select Database:"
@@ -357,13 +357,3 @@ if question and database and schema and selected_table_name:
 
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": full_response})
-
-# streamlit run app.py --server.port 5100
-
-# docker build -t genai .
-
-# docker tag genai us-central1-docker.pkg.dev/kd-data-science-poc/genai/genai
-
-# docker push us-central1-docker.pkg.dev/kd-data-science-poc/genai/genai
-
-# gcloud auth configure-docker us-central1-docker.pkg.dev
