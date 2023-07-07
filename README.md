@@ -1,1 +1,1 @@
-# SQLGenius
+![SQLGenius](images/SQLGenius.png)
