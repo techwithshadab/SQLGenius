@@ -226,7 +226,7 @@ sf_dict = {'user': 'username', 'password': 'password', 'account': 'account',
 
 
 # Page icon
-icon = Image.open('app_images/icon.png')
+icon = Image.open('./app_images/icon.png')
 
 # Page config
 st.set_page_config(page_title="SQLGenius",
@@ -245,7 +245,7 @@ database = None
 schema = None
 selected_table_name= None
 
-with open("app_images/SQLGenius.png", "rb") as f:
+with open("./app_images/SQLGenius.png", "rb") as f:
     data = base64.b64encode(f.read()).decode("utf-8")
 
     st.sidebar.markdown(
