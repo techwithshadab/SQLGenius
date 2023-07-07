@@ -3,10 +3,12 @@ import streamlit as st
 from langchain import PromptTemplate, LLMChain
 from snowflake.connector import connect
 import re
+from PIL import Image
 import pandas as pd
 import base64
 import sys
 sys.path.append('/Users/shadabhussain/Documents/Hackathons/SQLGenius/app')
+# sys.path.append('/app/sqlgenius/app')
 
 
 # Execute Snowflake Query
@@ -221,8 +223,19 @@ sf_dict = {'user': 'username', 'password': 'password', 'account': 'account',
 # database = sf_dict['database']
 # schema = sf_dict['schema']
 
-st.title("SQLGenius")
 
+
+# Page icon
+icon = Image.open('app_images/icon.png')
+
+# Page config
+st.set_page_config(page_title="SQLGenius",
+                   page_icon=icon,
+                   layout="wide",
+                   initial_sidebar_state="expanded"
+                   )
+
+st.title("SQLGenius")
 # List of Databases
 db_label = "Select Database:"
 db_details_query = "SHOW SCHEMAS;"
@@ -232,7 +245,7 @@ database = None
 schema = None
 selected_table_name= None
 
-with open("/app/sqlgenius/app/SQLGenius.png", "rb") as f:
+with open("app_images/SQLGenius.png", "rb") as f:
     data = base64.b64encode(f.read()).decode("utf-8")
 
     st.sidebar.markdown(
