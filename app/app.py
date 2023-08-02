@@ -6,6 +6,7 @@ import re
 from PIL import Image
 import pandas as pd
 import base64
+import os
 
 # Execute Snowflake Query
 def execute_snowflake_query(query, sf_dict):
@@ -222,6 +223,7 @@ sf_dict = {'user': 'username', 'password': 'password', 'account': 'account',
 sys_path = '/Users/shadabhussain/Documents/Hackathons/SQLGenius/app'
 streamlit_path = '/app/sqlgenius/app'
 path = streamlit_path
+path = os.getcwd()
 # Page icon
 icon = Image.open(path+'/app_images/icon.png')
 
