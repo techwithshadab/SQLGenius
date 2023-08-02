@@ -6,6 +6,7 @@ import re
 from PIL import Image
 import pandas as pd
 import base64
+import requests
 
 # Execute Snowflake Query
 def execute_snowflake_query(query, sf_dict):
@@ -224,7 +225,12 @@ streamlit_path = '/app/sqlgenius/app'
 path = streamlit_path
 
 # Page icon
-icon = Image.open(path+'/app_images/icon.png')
+# icon = Image.open(path+'/app_images/icon.png')
+
+
+url_icon = “https://github.com/techwithshadab/SQLGenius/app/app_images/icon.png”
+response = requests.get(url_icon)
+icon = Image.open(BytesIO(response.content))
 
 # Page config
 st.set_page_config(page_title="SQLGenius",
