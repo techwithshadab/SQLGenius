@@ -223,7 +223,7 @@ sf_dict = {'user': 'username', 'password': 'password', 'account': 'account',
 
 sys_path = '/Users/shadabhussain/Documents/Hackathons/SQLGenius/app'
 streamlit_path = '/app/sqlgenius/app'
-path = streamlit_path
+path = "app" #streamlit_path
 
 # Page icon
 icon = Image.open(path+'/app_images/icon.png')
