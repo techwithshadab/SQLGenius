@@ -228,7 +228,7 @@ path = streamlit_path
 # icon = Image.open(path+'/app_images/icon.png')
 
 
-url_icon = “https://github.com/techwithshadab/SQLGenius/app/app_images/icon.png”
+url_icon = "https://github.com/techwithshadab/SQLGenius/app/app_images/icon.png"
 response = requests.get(url_icon)
 icon = Image.open(BytesIO(response.content))
 
