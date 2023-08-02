@@ -226,7 +226,7 @@ path = streamlit_path
 path = os.getcwd()
 # Page icon
 # icon = Image.open(path+'/app_images/icon.png')
-icon = Image.open('app_images/icon.png')
+icon = Image.open('./app_images/icon.png')
 
 # Page config
 st.set_page_config(page_title="SQLGenius",
