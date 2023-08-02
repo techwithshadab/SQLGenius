@@ -7,6 +7,7 @@ from PIL import Image
 import pandas as pd
 import base64
 import requests
+from io import BytesIO
 
 # Execute Snowflake Query
 def execute_snowflake_query(query, sf_dict):
